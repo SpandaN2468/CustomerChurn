@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home2.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Customer Churn Prediction</h1>
+            <p class="subtitle">Enter customer details to predict churn probability</p>
+        </header>
+
+        <div class="form-container">
+            <form action="http://localhost:5000/" method="POST" class="prediction-form">
+                <!-- Row 1 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query1">Senior Citizen</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query1" name="query1" rows="1">{{query1}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query2">Monthly Charges</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query2" name="query2" rows="1">{{query2}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query3">Total Charges</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query3" name="query3" rows="1">{{query3}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query4">Gender</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query4" name="query4" rows="1">{{query4}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query5">Partner</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query5" name="query5" rows="1">{{query5}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query6">Dependents</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query6" name="query6" rows="1">{{query6}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query7">Phone Service</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query7" name="query7" rows="1">{{query7}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query8">Multiple Lines</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query8" name="query8" rows="1">{{query8}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query9">Internet Service</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query9" name="query9" rows="1">{{query9}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query10">Online Security</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query10" name="query10" rows="1">{{query10}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query11">Online Backup</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query11" name="query11" rows="1">{{query11}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query12">Device Protection</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query12" name="query12" rows="1">{{query12}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query13">Tech Support</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query13" name="query13" rows="1">{{query13}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query14">Streaming TV</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query14" name="query14" rows="1">{{query14}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query15">Streaming Movies</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query15" name="query15" rows="1">{{query15}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query16">Contract</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query16" name="query16" rows="1">{{query16}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query17">Paperless Billing</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query17" name="query17" rows="1">{{query17}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="query18">Payment Method</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query18" name="query18" rows="1">{{query18}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query19">Tenure (Months)</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="query19" name="query19" rows="1">{{query19}}</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit-section">
+                    <button type="submit" class="submit-btn" name="submit">
+                        <i class="fas fa-calculator"></i> Predict Churn
+                    </button>
+                </div>
+            </form>
+
+            <div class="results-container">
+                <div class="result-card">
+                    <h3><i class="fas fa-chart-pie"></i> Prediction Results</h3>
+                    <div class="result-content">
+                        <textarea class="result-output" id="comment" name="query6" rows="2" readonly>{{output1}}</textarea>
+                        <textarea class="result-output" id="comment" name="query7" rows="2" readonly>{{output2}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
